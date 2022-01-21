@@ -1,0 +1,162 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.img-sl {
+  transition: all 0.7s ease-out 0s;
+  object-fit: cover;
+  /*width: 100vh;*/
+  /*height: 94vh;*/
+  height: 400px;
+  filter: brightness(50%);
+}
+
+.inner {
+  overflow: hidden;
+}
+
+.inner img {
+  transition: all 1.5s ease;
+}
+
+.inner:hover img {
+  transform: scale(1.5);
+}
+
+.scroll-up {
+  position: fixed;
+  /*left: 50px;*/
+  /*bottom: 20px;*/
+  /*z-index: 1000;*/
+  right: 25px;
+  z-index: 1000;
+  bottom: 100px;
+
+  width: 50px;
+  height: 50px;
+  color: white;
+  cursor: pointer;
+  visibility: hidden;
+  border-radius: 50px;
+  box-shadow: inset 0 0 0 4px #dcdedc;
+  opacity: 0;
+  transition: .2s;
+  transform: translateY(25px);
+}
+.scroll-up:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+  font-size: 24px;
+  font-weight: 900;
+  content: '↑'; /* = content: 'U+2191'; */
+}
+.scroll-up:hover {
+  color: black;
+}
+.scroll-up--active {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+
+  transition: .3s linear;
+}
+.scroll-up__svg-path {
+  box-sizing: border-box;
+  fill: none;
+  stroke: darkred;
+  stroke-width: 4px;
+  transition: .2s;
+}
+
+.parallax {
+  height: 600px;
+  width: 100%;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 60px;
+  align-items: center;
+  position: relative;
+  filter: brightness(50%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.fImg {
+  background-image: url("https://images.pexels.com/photos/4508751/pexels-photo-4508751.jpeg?cs=srgb&dl=pexels-brett-sayles-4508751.jpg&fm=jpg");
+}
+.sImg {
+  background-image: url("https://images.pexels.com/photos/6804585/pexels-photo-6804585.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+}
+.tImg {
+  background-image: url("https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg?cs=srgb&dl=pexels-manuel-geissinger-325229.jpg&fm=jpg");
+}
+
+.footer{
+  padding: 1rem;
+  background-color: #1a1e21;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: white;
+}
+
+.lgN {
+  line-height: 15px;
+}
+
+.aFooter {
+  text-decoration: none;
+  color: #5c0006;
+}
+
+.homeVideo {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
